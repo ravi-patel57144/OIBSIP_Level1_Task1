@@ -1,0 +1,327 @@
+/* Wild card */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* header */
+  header {
+    background-color: #23afa6;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    background: linear-gradient(to right, #23afa6, #0d7b1f);
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #ff6600;
+  }
+
+  
+  
+  
+/* Page start */
+  
+  
+  main {
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+
+  /* Carousel */
+  .carousel h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .slide {
+    position: relative;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .prev-button {
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .next-button {
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  
+  /* About us */
+  .about-us {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }  
+  
+  .about-us img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2%;
+    overflow: hidden; /* This ensures that the image stays within the rounded shape */
+  }
+  
+  
+  
+  .about-us h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-radius: 10%;
+  }
+  
+  .about-us p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  .about-us p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Contact me */
+  .contact-form {
+    background-color: #f5f5f5;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+  }
+  
+  .contact-form h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form .form-group {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form input[type="text"]:focus,
+  .contact-form input[type="email"]:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: #004040;
+  }
+  
+  /* footer */
+  footer {
+    background-color: #23afa6;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .social a:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  .social img {
+    height: 30px;
+    margin: 0 10px;
+  }
+  
+  .copy {
+    text-align: center;
+  }
+  
+  
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav ul {
+      margin-top: 20px;
+    }
+    
+    nav li:not(:last-child) {
+      margin-right: 10px;
+    }
+    .slides {
+        scroll-snap-type: none;
+        overflow-x: auto;
+      }
+    
+      .slide {
+        flex: 0 0 60%;
+        margin-right: 10px;
+        scroll-snap-align: none;
+      }
+    
+      .prev-button,
+      .next-button {
+        font-size: 1.5rem;
+        padding: 5px 10px;
+      }
+    
+      .about-us img {
+        width: 100%;
+      }
+      .contact-form {
+        padding: 30px;
+      }
+      
+      .contact-form h3 {
+        font-size: 1.5rem;
+      }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .slide {
+      flex: 0 0 80%;
+    }
+  
+    .prev-button,
+    .next-button {
+      font-size: 1.2rem;
+      padding: 3px 8px;
+    }
+    
+    .about-us h3 {
+      font-size: 1.5rem;
+    }
+  
+    .about-us p {
+      font-size: 1rem;
+    }
+    .contact-form {
+        padding: 20px;
+      }
+      
+      .contact-form h3 {
+        font-size: 1.2rem;
+      }
+      
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+      
+      .contact-form button[type="submit"] {
+        padding: 8px 16px;
+        font-size: 1rem;
+      }
+  }
